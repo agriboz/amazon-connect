@@ -61,7 +61,7 @@ export default {
    */
   axios: {
     // See https://github.com/nuxt-community/axios-module#options
-    baseURL: '//aws.notime.org:3000/'
+    baseURL: 'http://aws.notime.org:3000/'
     // baseURL: 'https://entplcwsx002.amwater.net:2778'
   },
 
