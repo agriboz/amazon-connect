@@ -82,3 +82,5 @@ typings/
 
 # Service worker
 sw.*
+
+.vscode

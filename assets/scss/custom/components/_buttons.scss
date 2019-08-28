@@ -1,4 +1,4 @@
-// 
+//
 // buttons.scss
 //
 
@@ -17,6 +17,6 @@
 // Button Shadows
 @each $color, $value in $theme-colors {
     .btn-#{$color} {
-        @include button-shadow($value);
+        // @include button-shadow($value);
     }
 }

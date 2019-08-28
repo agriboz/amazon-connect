@@ -1,5 +1,6 @@
 export default function({ store, redirect, route }) {
-  if (!store.state.user.token) {
+  console.log(store.state.user)
+  if (!store.state.user.id) {
     store.state.redirect = route
     return redirect('/')
   }

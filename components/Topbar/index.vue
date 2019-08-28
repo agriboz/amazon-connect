@@ -1,35 +1,6 @@
 <template>
   <!-- Topbar Start -->
   <div class="navbar-custom">
-    <ul class="list-unstyled topbar-right-menu float-right mb-0">
-      <b-nav-item-dropdown
-        no-caret
-        extra-toggle-classes="nav-user"
-        class="notification-list"
-      >
-        <template slot="button-content">
-          <span class="account-user-avatar">
-            <img
-              src="../../assets/images/avatar.svg"
-              alt="user-image"
-              class="rounded-circle"
-            />
-          </span>
-          <span>
-            <span class="account-user-name"
-              >{{ user.firstname }} {{ user.lastname }}</span
-            >
-            <span class="account-position">{{ user.teamname }}</span>
-          </span>
-        </template>
-        <b-dropdown-item>
-          <n-link :to="'/logout'" class="side-nav-link">
-            <i class="mdi mdi-logout mr-1" />
-            <span>Sign Out</span>
-          </n-link>
-        </b-dropdown-item>
-      </b-nav-item-dropdown>
-    </ul>
     <button
       class="button-menu-mobile open-left disable-btn"
       @click.prevent="initMenu"

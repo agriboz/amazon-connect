@@ -8,13 +8,12 @@
 
     <div class="content-page">
       <div class="content">
-        <topbar />
+        <!-- <topbar /> -->
         <nuxt />
         <!-- Start Content-->
+        <bottombar v-if="isFooterVisible" />
       </div>
       <!-- content -->
-
-      <bottombar />
     </div>
 
     <!-- ============================================================== -->
@@ -26,20 +25,20 @@
 
 <script>
 import { mapState } from 'vuex'
-import Topbar from '@/components/Topbar'
+// import Topbar from '@/components/Topbar'
 import Sidebar from '@/components/Sidebar'
 import Bottombar from '@/components/Footer'
 import Loading from '@/components/Loading'
 export default {
-  middleware: ['auth'],
+  middleware: 'auth',
   components: {
     Sidebar,
-    Topbar,
+    // Topbar,
     Bottombar,
     Loading
   },
   computed: {
-    ...mapState(['loading'])
+    ...mapState(['loading', 'isFooterVisible'])
   },
 
   beforeMount() {

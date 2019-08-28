@@ -100,14 +100,11 @@ File: Main Css File
 @import "custom/plugins/typehead";
 @import "custom/plugins/sparklines"; */
 
-// Duallistbox Icons
-@import "quartz/duallistbox.scss";
 
-// Sidebar Icons
-@import "quartz/icons.scss";
+// Amazon Connect Specific Styles
 
-// Heatmaps
-@import "quartz/heatmaps.scss";
+// Duallistbox
+@import "universal/duallistbox.scss";
 
-// Tabs
-@import "quartz/tabs.scss";
+// Common
+@import "universal/common.scss";

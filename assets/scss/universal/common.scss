@@ -1,0 +1,32 @@
+
+html, body, #__nuxt, #__layout, .container-fluid, .content-page, .content {
+   height: 100%;
+}
+
+body {
+  padding-bottom: 0;
+}
+
+.icon-settings {
+  cursor: pointer;
+}
+
+.threshold-size {
+  width: 21px;
+}
+
+.transition {
+  transition: all 0.5s linear;
+}
+
+.font-3rem {
+    font-size: 3rem !important;
+}
+
+.font-5rem {
+    font-size: 5rem !important;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}

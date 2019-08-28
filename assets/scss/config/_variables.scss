@@ -58,7 +58,7 @@ $colors: map-merge((
   "gray-dark":  $gray-800
 ), $colors);
 
-$primary:       $indigo;
+$primary:       $blue;
 $secondary:     $gray-700;
 $success:       $green;
 $info:          $cyan;
@@ -112,8 +112,12 @@ $spacers: map-merge((
 // This variable affects the `.h-*` and `.w-*` classes.
 $sizes: ();
 $sizes: map-merge((
+  10: 10%,
   15: 15%,
+  20: 20%,
   25: 25%,
+  30: 30%,
+  40: 40%,
   50: 50%,
   75: 75%,
   100: 100%
@@ -124,8 +128,10 @@ $sizes: map-merge((
 //
 // Settings for the `<body>` element.
 
-$body-bg:                   #fafbfe;
-$body-color:                $gray-700;
+// $body-bg:                   #fafbfe;
+$body-bg:                   #22313f;
+// $body-color:                $gray-700;
+$body-color:                $gray-500;
 
 
 // Links

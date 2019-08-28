@@ -3,22 +3,32 @@
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-5">
-          <div class="card">
+          <div>
             <!-- Logo -->
-            <div v-if="company.logo" class="card-header pt-4 pb-4 text-center">
+            <div class="pt-4 pb-2 text-center">
               <img
                 class="img-fluid"
-                :src="company.logo"
-                :alt="company.name"
-                :title="company.name"
+                src="../../assets/images/comstice-logo.png"
+                alt="Comstice"
+                title="Comstice"
               />
             </div>
 
-            <div class="card-body p-4">
+            <div class="pt-0 pl-4 pr-4">
               <div class="text-center w-75 m-auto">
-                <h4 class="text-dark-50 text-center mt-0 mb-4 font-weight-bold">
-                  Quartz Analytics
+                <h4
+                  class="text-dark-50 text-center mt-0 mb-2 font-weight-bold text-white"
+                >
+                  Welcome to Comstice Wallboard
                 </h4>
+                <p class="text-white">
+                  Wallboard presents the real-time information about your Cisco
+                  Contact Center
+                </p>
+                <p class="text-white">
+                  Please login using your Windows Login or Cisco CUCM user
+                  credentials.
+                </p>
               </div>
 
               <form form @submit.prevent="handleSubmit">
@@ -26,8 +36,9 @@
                   {{ alert.message }}
                 </div>
                 <div class="form-group">
-                  <label for="emailaddress">Username</label>
+                  <label for="username" class="text-white">Username</label>
                   <input
+                    id="username"
                     v-model="user.username"
                     v-validate="'required'"
                     name="username"
@@ -47,8 +58,9 @@
                 </div>
 
                 <div class="form-group">
-                  <label for="password">Password</label>
+                  <label for="password" class="text-white">Password</label>
                   <input
+                    id="password"
                     v-model="user.password"
                     v-validate="{ required: true, min: 3 }"
                     class="form-control"
@@ -68,7 +80,7 @@
                 </div>
 
                 <div class="form-group mb-0 text-center">
-                  <button class="btn btn-primary" type="submit">
+                  <button class="btn btn-success btn-block" type="submit">
                     Log In
                   </button>
                 </div>
@@ -85,12 +97,6 @@
       <!-- end row -->
     </div>
     <!-- end container -->
-    <div class="comstice-logo" :class="{ dark: isDark }">
-      <a href="http://comstice.com">
-        <span :style="{ color: setTextColor.loginTextColor }">Powered By</span>
-        <img :src="logo" class="ml-1" alt="Comstice" height="30px" />
-      </a>
-    </div>
   </div>
 </template>
 
@@ -98,11 +104,6 @@
 import { mapState, mapActions } from 'vuex'
 export default {
   data: () => ({
-    company: {
-      logo: process.env.companyLogo,
-      name: process.env.name,
-      loginColor: process.env.loginBgColor
-    },
     submitted: false,
     user: {
       username: '',
@@ -113,20 +114,7 @@ export default {
   computed: {
     ...mapState({
       alert: state => state.alert
-    }),
-    setTextColor() {
-      return {
-        loginTextColor: process.env.loginTextColor
-      }
-    },
-    isDark() {
-      return process.env.bgDark
-    },
-    logo() {
-      return require(`@/assets/images/comstice-logo-${
-        this.isDark ? 'light' : 'dark'
-      }.png`)
-    }
+    })
   },
 
   watch: {
@@ -152,16 +140,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-.comstice-logo {
-  position: absolute;
-  bottom: 10px;
-  width: 100%;
-  text-align: center;
-}
-
-.comstice-logo.dark span {
-  color: #eeeeee;
-}
-</style>

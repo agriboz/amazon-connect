@@ -22,6 +22,7 @@ export default function({ app, $axios, store, redirect }) {
         config.headers.Authorization = `Bearer ${token.token}`
       }
 
+      // eslint-disable-next-line
       if (!config.hasOwnProperty('cancelToken')) {
         // Exclude requests that don't require cancel
         const source = axios.CancelToken.source()

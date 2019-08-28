@@ -4,22 +4,22 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-5">
-            <div class="card">
+            <div>
               <!-- Logo -->
-              <div class="card-header pt-4 pb-4 text-center bg-primary">
-                <a href="index.html">
+              <div class="pt-4 pb-1 text-center">
+                <a href="http://www.comstice.com/" target="_blank">
                   <span
-                    ><img src="../assets/images/logo.png" height="50"
+                    ><img src="../assets/images/comstice-logo.png" height="200"
                   /></span>
                 </a>
               </div>
 
-              <div class="card-body p-4">
+              <div class="card-body p-2">
                 <div class="text-center w-75 m-auto">
-                  <h4 class="text-dark-50 text-center mt-0 font-weight-bold">
+                  <h4 class="text-white text-center mt-0 font-weight-bold">
                     See You Again !
                   </h4>
-                  <p class="text-muted mb-4">
+                  <p class="text-white mb-4">
                     You are now successfully sign out.
                   </p>
                 </div>
@@ -87,9 +87,9 @@
 
             <div class="row mt-3">
               <div class="col-12 text-center">
-                <p class="text-muted">
+                <p class="text-white">
                   Back to
-                  <n-link :to="'/'" class="text-muted ml-1"
+                  <n-link :to="'/'" class="text-white ml-1"
                     ><b>Log In</b></n-link
                   >
                 </p>
@@ -106,9 +106,9 @@
     </div>
     <!-- end page -->
 
-    <footer class="footer footer-alt text-muted">
+    <footer class="footer footer-alt text-white">
       <a
-        class="text-bold-800 text-light"
+        class="text-bold-800 font-weight-bold text-white"
         href="http://www.comstice.com/"
         target="_blank"
       >

@@ -1,27 +1,43 @@
 <template>
   <div class="container-fluid">
-    <!-- start page title -->
-    <page-title title="" />
-    <!-- end page title -->
-    <div class="row">
-      <div class="col-12">
-        <div class="card">
-          <div class="card-body">
-            <p>Home Page</p>
-          </div>
-        </div>
-      </div>
-    </div>
+    <sla-today-text />
+    <!-- <sla-today-chart /> -->
+    <!-- <calls-answered-hourly /> -->
+    <!-- <calls-received-answered /> -->
+    <!-- <calls-received /> -->
+    <!-- <calls-received-answered-abandoned /> -->
+    <!-- <agent-states /> -->
+
+    <!-- <calls-in-queue />
+
+    <oldest-in-queue /> -->
   </div>
   <!-- container -->
 </template>
 
 <script>
-import PageTitle from '@/components/PageTitle'
+import SlaTodayText from '@/components/Widgets/SlaTodayText'
+// import SlaTodayChart from '@/components/Widgets/SlaTodayChart'
+// import CallsAnsweredHourly from '@/components/Widgets/CallsAnsweredHourly'
+// import CallsReceivedAnswered from '@/components/Widgets/CallsReceivedAnswered'
+// import CallsReceived from '@/components/Widgets/CallsReceived'
+// import CallsReceivedAnsweredAbandoned from '@/components/Widgets/CallsReceivedAnsweredAbandoned'
+// import AgentStates from '@/components/Widgets/AgentStates'
+// import CallsInQueue from '@/components/Widgets/CallsInQueue'
+// import OldestInQueue from '@/components/Widgets/OldestInQueue'
+
 export default {
   layout: 'authenticated',
   components: {
-    PageTitle
+    SlaTodayText
+    // SlaTodayChart
+    // CallsAnsweredHourly
+    // AgentStates
+    // CallsInQueue,
+    // OldestInQueue
+    // CallsReceivedAnsweredAbandoned
+    // CallsReceived,
+    // CallsReceivedAnswered
   }
 }
 </script>
