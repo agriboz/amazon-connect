@@ -31,7 +31,7 @@
     "moment-duration-format": "^2.3.2",
     "moment-range": "^4.0.2",
     "nuxt": "^2.8.1",
-    "papaparse": "^5.0.1",
+    "papaparse": "^5.2.0",
     "vee-validate": "^2.2.14",
     "vue-apexcharts": "^1.4.0",
     "vue-chartjs": "^3.4.2",
